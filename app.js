@@ -31,3 +31,8 @@ app.get('/', (req, res) => {
 server.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
+
+module.exports = app;
+
+// { "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }] }
+// "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
