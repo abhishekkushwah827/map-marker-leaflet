@@ -26,8 +26,8 @@ io.on("connection", function (socket) {
 })
 
 app.get('/', (req, res) => {
-    // res.render("index");
-    res.send("Hello world");
+    res.render("index");
+    // res.send("Hello world");
 })
 
 server.listen(port, () => {
