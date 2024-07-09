@@ -2,11 +2,16 @@ const express = require('express')
 const app = express();
 const http = require('http');
 const path = require('path');
-const scoketio = require('socket.io');
+const socketIo = require('socket.io');
 
 const server = http.createServer(app);
 
-const io = scoketio(server);
+const io = socketIo(server, {
+    cors: {
+        origin: "*",
+        methods: ["GET", "POST"]
+    }
+});
 
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
